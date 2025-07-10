@@ -19,135 +19,83 @@ window#waybar.hidden {
 @import url("file:///home/tekk/.cache/wal/colors-waybar.css");
 
 /* Common module styles */
-#clock,
-#battery,
-#network,
 #custom-updates,
 #custom-media {
-    margin-top: 6px;
-    margin-left: 3px;
-    margin-bottom: 0px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 4px;
-    padding-bottom: 4px;
+    margin: 6px 0 0 0;
+    padding: 4px 15px 4px 15px;
+    transition: none;
+    color: @foreground;
+    background: @background;
+}
+#clock {
+    margin: 6px 6px 0 6px;
+    padding: 4px 15px 4px 15px;
     transition: none;
     color: @foreground;
     background: @background;
 }
 
-/* Tray specific styles */
+#cpu {
+    margin: 6px 0 0 0px;
+    padding: 4px 5px 4px 15px;
+    border-radius: 18px 0 0 18px;
+    transition: none;
+    color: @foreground;
+    background: @background;
+}
+#memory {
+    margin: 6px 0px 0 0;
+    padding: 4px 15px 4px 5px;
+    border-radius: 0 18px 18px 0;
+    transition: none;
+    color: @foreground;
+    background: @background;
+}
+
 #tray {
-    margin-top: 6px;
-    margin-left: 8px;
-    margin-bottom: 0px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 4px;
-    padding-bottom: 4px;
+    margin: 6px 10px 0 0;
+    padding: 4px 15px 4px 15px;
     transition: none;
     color: @foreground;
     background: @background;
 }
 
-/* Merged CPU and Memory container */
-#cpu {
-    margin-top: 6px;
-    margin-left: 3px;
-    margin-bottom: 0px;
-    padding-left: 15px;
-    padding-right: 10px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    transition: none;
-    color: @foreground;
-    background: @background;
-}
-#memory {
-    margin-top: 6px;
-    margin-left: 3px;
-    margin-bottom: 0px;
-    padding-left: 10px;
-    padding-right: 17px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    transition: none;
-    color: @foreground;
-    background: @background;
-}
 
-/* Remove margin between CPU and Memory to merge them */
-#cpu {
-    margin-right: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-}
 
-#memory {
-    margin-left: 0px;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-}
-
-/* Merged Sound and Backlight container */
 #pulseaudio {
-    margin-top: 6px;
-    margin-left: 3px;
-    margin-bottom: 0px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 4px;
-    padding-bottom: 4px;
+    margin: 6px 0px 0px 0px;
+    padding: 4px 5px 4px 15px;
+    border-radius: 18px 0 0 18px;
     transition: none;
     color: @foreground;
     background: @background;
 }
 #backlight {
-    margin-top: 6px;
-    margin-bottom: 0px;
-    padding-left: 10px;
-    padding-right: 20px;
-    padding-top: 4px;
-    padding-bottom: 4px;
+    margin: 6px 0px 0px 0px;
+    padding: 4px 15px 4px 5px;
+    border-radius: 0 18px 18px 0;
     transition: none;
     color: @foreground;
     background: @background;
-}
-
-/* Remove margin between Sound and Backlight to merge them */
-#pulseaudio {
-    margin-right: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-}
-
-#backlight {
-    margin-left: 0px;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
 }
 
 /* Window module */
 #window {
-    margin-top: 6px;
-    padding-left: 20px;
-    padding-right: 20px;
+    margin: 6px 0 0 0;
+    padding: 4px 15px 4px 15px;
     border-radius: 10px;
     transition: none;
     color: transparent;
     background: transparent;
-    min-width: 200px;
 }
 
 /* Workspaces/Tags */
 #workspaces {
-    margin-top: 6px;
-    margin-left: 3px;
-    margin-bottom: 0px;
+    margin: 6px 0 0 0;
+    padding: 2px 7px 2px 7px;
     border-radius: 10px;
-    background: rgba(0, 0, 0, 0.4);
+    /* background: rgba(0, 0, 0, 0.4); */
     transition: none;
-    padding: 4px 5px;
 }
 
 #workspaces button {
@@ -156,7 +104,7 @@ window#waybar.hidden {
     background: transparent;
     font-size: 12px;
     border-radius: 2px;
-    padding: 0px 5px;
+    padding: 0px 7px;
 }
 
 #workspaces button.active {
@@ -175,12 +123,15 @@ window#waybar.hidden {
     background: transparent;
 }
 
-/* Network module */
-#network {
-    color: @background;
+/* Battery states */
+#battery {
+    margin: 6px 6px 0 6px;
+    padding: 4px 15px 4px 15px;
+    transition: none;
+    color: @foreground;
+    background: @background;
 }
 
-/* Battery states */
 #battery.charging,
 #battery.plugged {
     color: @background;
@@ -206,29 +157,20 @@ window#waybar.hidden {
 
 /* Custom modules */
 #custom-start-menu {
-    margin-top: 6px;
-    margin-left: 8px;
-    margin-bottom: 0px;
-    font-size: 16px;
-    padding-left: 8px;
-    padding-right: 16px;
-    padding-top: 4px;
-    padding-bottom: 3px;
+
+    margin: 6px 10px 0 0;
+    padding: 2px 14px 0px 7px;
+    border-radius: 10px;
     color: @background;
     background: @color1;
-    border-radius: 10px;
+    transition: none;
 }
 
 #custom-power {
-    margin-top: 6px;
-    margin-left: 8px;
-    margin-bottom: 0px;
-    font-size: 14px;
-    padding-left: 11px;
-    padding-right: 16px;
-    padding-top: 4px;
-    padding-bottom: 4px;
+    margin: 6px 0 0 0;
+    padding: 0px 14px 0px 9px;
+    border-radius: 10px;
     color: @background;
     background: @color3;
-    border-radius: 10px;
+    transition: none;
 } 
