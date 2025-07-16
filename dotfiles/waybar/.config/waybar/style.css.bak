@@ -1,0 +1,176 @@
+/* Global styles */
+* {
+    border: none;
+    border-radius: 18px;
+    font-family: "Terminess Nerd Font";
+    font-size: 16px;
+    min-height: 10px;
+}
+
+/* Window styles */
+window#waybar {
+    background: transparent;
+}
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/* Import pywal colors */
+@import url("file:///home/tekk/.cache/wal/colors-waybar.css");
+
+/* Common module styles */
+#custom-updates,
+#custom-media {
+    margin: 6px 0 0 0;
+    padding: 4px 15px 4px 15px;
+    transition: none;
+    color: @foreground;
+    background: @background;
+}
+#clock {
+    margin: 6px 6px 0 6px;
+    padding: 4px 15px 4px 15px;
+    transition: none;
+    color: @foreground;
+    background: @background;
+}
+
+#cpu {
+    margin: 6px 0 0 0px;
+    padding: 4px 5px 4px 15px;
+    border-radius: 18px 0 0 18px;
+    transition: none;
+    color: @foreground;
+    background: @background;
+}
+#memory {
+    margin: 6px 0px 0 0;
+    padding: 4px 15px 4px 5px;
+    border-radius: 0 18px 18px 0;
+    transition: none;
+    color: @foreground;
+    background: @background;
+}
+
+#tray {
+    margin: 6px 10px 0 0;
+    padding: 4px 15px 4px 15px;
+    transition: none;
+    color: @foreground;
+    background: @background;
+}
+
+
+
+#pulseaudio {
+    margin: 6px 0px 0px 0px;
+    padding: 4px 5px 4px 15px;
+    border-radius: 18px 0 0 18px;
+    transition: none;
+    color: @foreground;
+    background: @background;
+}
+#backlight {
+    margin: 6px 0px 0px 0px;
+    padding: 4px 15px 4px 5px;
+    border-radius: 0 18px 18px 0;
+    transition: none;
+    color: @foreground;
+    background: @background;
+}
+
+/* Window module */
+#window {
+    margin: 6px 0 0 0;
+    padding: 4px 15px 4px 15px;
+    border-radius: 10px;
+    transition: none;
+    color: transparent;
+    background: transparent;
+}
+
+/* Workspaces/Tags */
+#workspaces {
+    margin: 6px 0 0 0;
+    padding: 2px 7px 2px 7px;
+    border-radius: 10px;
+    /* background: rgba(0, 0, 0, 0.4); */
+    transition: none;
+}
+
+#workspaces button {
+    transition: none;
+    color: @foreground;
+    background: transparent;
+    font-size: 12px;
+    border-radius: 2px;
+    padding: 0px 7px;
+}
+
+#workspaces button.active {
+    transition: none;
+    color: @color2;
+    background: transparent;
+    margin-left: 10;
+    margin-right: 10;
+}
+
+#workspaces button:hover {
+    transition: none;
+    box-shadow: inherit;
+    text-shadow: inherit;
+    color: @color2;
+    background: transparent;
+}
+
+/* Battery states */
+#battery {
+    margin: 6px 6px 0 6px;
+    padding: 4px 15px 4px 15px;
+    transition: none;
+    color: @foreground;
+    background: @background;
+}
+
+#battery.charging,
+#battery.plugged {
+    color: @background;
+    background-color: @color2;
+}
+
+#battery.critical:not(.charging) {
+    background-color: @color1;
+    color: @background;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        background-color: red;
+        color: @foreground;
+    }
+}
+
+/* Custom modules */
+#custom-start-menu {
+
+    margin: 6px 10px 0 0;
+    padding: 2px 14px 0px 7px;
+    border-radius: 10px;
+    color: @background;
+    background: @color1;
+    transition: none;
+}
+
+#custom-power {
+    margin: 6px 0 0 0;
+    padding: 0px 14px 0px 9px;
+    border-radius: 10px;
+    color: @background;
+    background: @color3;
+    transition: none;
+} 

@@ -58,6 +58,13 @@ return require('packer').startup(function(use)
             require('Comment').setup()
         end
     }
+    use {
+        "folke/noice.nvim",
+        requires = {
+            { "MunifTanjim/nui.nvim" },
+            {"j-hui/fidget.nvim"},
+        }
+    }
 
     -- Single plugins
     use 'github/copilot.vim'
@@ -67,5 +74,5 @@ return require('packer').startup(function(use)
     use 'ThePrimeagen/vim-be-good'
     use 'airblade/vim-gitgutter'
     use 'nvim-tree/nvim-tree.lua'
-
+    use 'echasnovski/mini.nvim'
 end)

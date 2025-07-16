@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Wallpaper selector script using wofi
-# Selects wallpaper, renames to selected.jpeg, restarts swww, runs wal
+# Selects wallpaper, renames to selected.png, restarts swww, runs wal
 
 WALLPAPER_DIR="$HOME/hyprtekdots/wallpapers/"
-SELECTED_FILE="selected.jpeg"
+SELECTED_FILE="selected.png"
 
 # Check if wallpaper directory exists
 if [ ! -d "$WALLPAPER_DIR" ]; then
@@ -15,8 +15,8 @@ fi
 # Change to wallpaper directory
 cd "$WALLPAPER_DIR" || exit 1
 
-# Get list of jpeg files (excluding selected.jpeg)
-mapfile -t wallpapers < <(find . -maxdepth 1 -name "*.jpeg" -not -name "$SELECTED_FILE" -type f | sed 's|^\./||' | sort)
+# Get list of png files (excluding selected.png)
+mapfile -t wallpapers < <(find . -maxdepth 1 -name "*.png" -not -name "$SELECTED_FILE" -type f | sed 's|^\./||' | sort)
 
 # Check if there are any wallpapers
 if [ ${#wallpapers[@]} -eq 0 ]; then
@@ -39,15 +39,15 @@ if [ ! -f "$selected_wallpaper" ]; then
     exit 1
 fi
 
-# If selected.jpeg already exists, rename it to a random name
+# If selected.png already exists, rename it to a random name
 if [ -f "$SELECTED_FILE" ]; then
     # Generate random name with timestamp and random number
-    random_name="!previous.jpeg"
+    random_name="!previous.png"
     echo "Renaming existing $SELECTED_FILE to $random_name"
     mv "$SELECTED_FILE" "$random_name"
 fi
 
-# Copy the selected wallpaper to selected.jpeg
+# Copy the selected wallpaper to selected.png
 echo "Setting $selected_wallpaper as selected wallpaper"
 cp "$selected_wallpaper" "$SELECTED_FILE"
 
@@ -72,3 +72,5 @@ echo "Wallpaper changed successfully!"
 if command -v notify-send &> /dev/null; then
     notify-send "Wallpaper Changed" "Set to: $selected_wallpaper" --icon="$WALLPAPER_DIR/$SELECTED_FILE"
 fi
+
+cd ~hyprtekdots/scripts/hyprland-border-colors.sh || exit 1

@@ -8,14 +8,8 @@ vim.keymap.set('t', 'jjk', '<C-\\><C-n>')
 
 vim.keymap.set("n","<leader>cm",":")
 
-vim.keymap.set("n","<leader>xf", vim.cmd.NvimTreeToggle)
+vim.keymap.set("n","<leader>fd", vim.cmd.NvimTreeToggle)
 
--- auto double stuff
-vim.keymap.set('i', '(', '()<ESC>i')
-vim.keymap.set('i', '[', '[]<ESC>i')
-vim.keymap.set('i', '{', '{}<ESC>i')
-
---those might be annoying
 vim.keymap.set('i', '"', '""<ESC>i')
 vim.keymap.set('i', "'", "''<ESC>i")
 
@@ -25,6 +19,7 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 vim.keymap.set("x", "<leader>p", "\"_dP")
+vim.keymap.set("x", "<leader>d", "\"_d")
 
 -- next greatest remap ever : asbjornHalanj
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
@@ -36,3 +31,8 @@ vim.keymap.set("n", "<leader>chmod", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- git gutter doesnt work at all yet
 vim.keymap.set("n", "<leader>gtg", vim.cmd.GitGutterEnable)
+
+vim.keymap.set("n","<C-h>", "<C-w>h")
+vim.keymap.set("n","<C-j>", "<C-w>j")
+vim.keymap.set("n","<C-k>", "<C-w>k")
+vim.keymap.set("n","<C-l>","<C-w>l")

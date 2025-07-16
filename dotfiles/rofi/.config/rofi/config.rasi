@@ -1,0 +1,121 @@
+/* ROUNDED THEME FOR ROFI WITH PYWAL INTEGRATION */
+/* Author: Newman Sanchez (https://github.com/newmanls) */
+/* Modified for pywal support */
+
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+* {
+    font: "Terminus 16";
+    background-color: transparent;
+    text-color: @foreground;
+    margin: 0px;
+    padding: 0px;
+    spacing: 0px;
+}
+
+window {
+    location: center;
+    anchor: center;
+    width: 800px;
+    height: 600px;
+    border-radius: 18px;
+    background-color: @background;
+    border: 2px solid;
+    border-color: @color5;
+}
+
+mainbox {
+    padding: 5px;
+    spacing: 0px;
+    children: [ inputbar, listview ];
+}
+
+inputbar {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: @color5;
+    border: 2px;
+    border-radius: 16px;
+    padding: 12px 16px;
+    spacing: 8px;
+    margin: 0px 0px 8px 0px;
+    children: [ prompt, entry ];
+}
+
+prompt {
+    text-color: @color5;
+    background-color: transparent;
+    font: "Terminus Bold 16";
+}
+
+entry {
+    placeholder: "Search";
+    placeholder-color: @color8;
+    text-color: @foreground;
+    background-color: transparent;
+    font: "Terminus 16";
+}
+
+listview {
+    background-color: transparent;
+    margin: 0px;
+    padding: 0px;
+    lines: 8;
+    columns: 1;
+    fixed-height: true;
+    fixed-columns: true;
+    scrollbar: true;
+    spacing: 4px;
+}
+
+scrollbar {
+    handle-width: 4px;
+    handle-color: @color5;
+    border-radius: 4px;
+    background-color: @color0;
+}
+
+element {
+    padding: 12px 16px;
+    spacing: 12px;
+    border-radius: 12px;
+    background-color: transparent;
+    text-color: @foreground;
+    children: [ element-icon, element-text ];
+}
+
+element normal normal {
+    background-color: transparent;
+    text-color: @foreground;
+}
+
+element selected normal {
+    background-color: @foreground;
+    text-color: @background;
+    border: 2px solid;
+    border-color: @color5;
+}
+
+element selected active {
+    background-color: @color5;
+    text-color: @background;
+}
+
+element alternate normal {
+    background-color: transparent;
+    text-color: @foreground;
+}
+
+element-icon {
+    size: 24px;
+    vertical-align: 0.5;
+    background-color: transparent;
+    text-color: inherit;
+}
+
+element-text {
+    text-color: inherit;
+    vertical-align: 0.5;
+    background-color: transparent;
+    font: "Terminus 16";
+    horizontal-align: 0.0;
+}

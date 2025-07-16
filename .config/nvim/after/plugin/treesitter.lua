@@ -9,4 +9,8 @@ require'nvim-treesitter.configs'.setup {
 	highlight = {
 		enable = true,
 	},
+    textobjects = {
+        enable = false,
+    }
 }
+
