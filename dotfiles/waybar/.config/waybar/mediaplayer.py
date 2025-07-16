@@ -1,1 +1,0 @@
-/home/tekk/hyprtekdots/configs/waybar/mediaplayer.py
