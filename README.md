@@ -5,4 +5,4 @@ Hi this my my personal dotfiles repo, I made it to function with my [dotfile ins
 There are a few crappy scripts in there I use to automate stuff like changeing walpapers and syncing the colors using `pywall`
 
 ## Screenshots ##
-![screenshot](https://raw.githubusercontent.com/tekluna/hyprtekdots/screenshots/desktop_blue.png)
+![screenshot](screenshots/desktop_blue.png)
