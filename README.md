@@ -4,14 +4,14 @@ Hi this my personal dotfiles repo. I made it to function with my [dotfile instal
 
 There are a few crappy scripts in there I use to automate stuff like changeing walpapers and syncing the colors using [`polybar`](https://github.com/dylanaraps/pywal)
 
-##THE DOTFILES##
+## THE DOTFILES ##
 The dotfiles are scrucuted to be used with [GNU Stow](https://www.gnu.org/software/stow/), so you can just clone this repo and run `stow nameofpackage` to symlink the files into the correct places.
  
-**packages**
+## Available configs ##
   - bashrc
   - btop
   - eww
-  - fastfetch (its ver broken)
+  - fastfetch (is ver broken)
   - hypr 
   - kitty 
   - nvim 
