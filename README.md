@@ -6,3 +6,5 @@ There are a few crappy scripts in there I use to automate stuff like changeing w
 
 ## Screenshots ##
 ![screenshot](screenshots/desktop_blue.png)
+![screenshot](screenshots/desktop_purple.png)
+![screenshot](screenshots/desktop_green.png)
