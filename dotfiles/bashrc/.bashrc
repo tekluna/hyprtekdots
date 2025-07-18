@@ -17,7 +17,8 @@ alias hm='cd ~'
 alias pyv='source ~/env01/bin/activate'
 alias walselect='source ~/hyprtekdots/scripts/diryfknselector.sh &'
 alias vim='nvim'
-
+alias fvim='nvim $( fzf -m --preview "bat --style=numbers --color=always {}" ) '
+alias fzf='fzf --preview "bat --style=numbers --color=always {}"'
 PS1='[\u@\h \W]\$ '
 
 # Oh-My-Posh init/config

@@ -4,7 +4,7 @@
 # Selects wallpaper, renames to selected.png, restarts swww, runs wal
 
 WALLPAPER_DIR="$HOME/hyprtekdots/wallpapers/"
-SELECTED_FILE="selected.png"
+selected_file="selected.png"
 
 # Check if wallpaper directory exists
 if [ ! -d "$WALLPAPER_DIR" ]; then
