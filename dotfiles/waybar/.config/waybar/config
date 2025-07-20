@@ -41,9 +41,9 @@
         "format": "{icon}",
         "font-size": 20,
         "format-icons": {
-            "active": "<big>󰫢</big>",
+            "active": "<big>󰫣</big>",
             "default": "󰫢",
-            "empty": "<small>󰫣</small>"
+            "empty": "<small>󰫢</small>"
         },
         "persistent-workspaces": {
             "1": [],
