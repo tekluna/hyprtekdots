@@ -11,7 +11,7 @@ The dotfiles are scrucuted to be used with [GNU Stow](https://www.gnu.org/softwa
   - bashrc
   - btop
   - eww
-  - fastfetch (is ver broken)
+  - fastfetch
   - hypr 
   - kitty 
   - nvim 
