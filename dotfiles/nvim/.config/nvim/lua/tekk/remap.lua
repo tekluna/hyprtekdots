@@ -6,6 +6,14 @@ vim.keymap.set('c', 'jjk', '<C-c>')
 vim.keymap.set('v', 'jjk', '<Esc>')
 vim.keymap.set('t', 'jjk', '<C-\\><C-n>')
 
+vim.keymap.set('i', 'JJK', '<Esc>')
+vim.keymap.set('c', 'JJK', '<C-c>')
+vim.keymap.set('v', 'JJK', '<Esc>')
+vim.keymap.set('t', 'JJK', '<C-\\><C-n>')
+
+vim.keymap.set("n", "<leader>w", vim.cmd.write)
+vim.keymap.set("n", "<leader>wq", ":wq<CR>")
+
 vim.keymap.set("n","<leader>cm",":")
 
 vim.keymap.set("n","<leader>fd", vim.cmd.NvimTreeToggle)

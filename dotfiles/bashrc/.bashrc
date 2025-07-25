@@ -25,3 +25,5 @@ PS1='[\u@\h \W]\$ '
 eval "$(oh-my-posh init bash --config ~/.config/oh-my-posh/tekk-posh-01.omp.json)"
 
  "$HOME/.cargo/env"
+
+export PATH=$PATH:/home/tekk/.spicetify

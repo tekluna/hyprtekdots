@@ -75,4 +75,5 @@ return require('packer').startup(function(use)
     use 'airblade/vim-gitgutter'
     use 'nvim-tree/nvim-tree.lua'
     use 'echasnovski/mini.nvim'
+    use 'prettier/vim-prettier'
 end)
