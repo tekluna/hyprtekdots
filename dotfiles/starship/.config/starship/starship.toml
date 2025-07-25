@@ -1,0 +1,8 @@
+# ~/.config/starship.toml
+[character]
+success_symbol = "[➜](bold $env:STARSHIP_COLOR)"
+error_symbol = "[✗](bold red)"
+
+# Set color using wal
+export STARSHIP_COLOR=$(cat ~/.cache/wal/colors.json | jq -r '.colors.color4')
+
