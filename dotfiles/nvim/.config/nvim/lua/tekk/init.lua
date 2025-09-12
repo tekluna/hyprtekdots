@@ -2,7 +2,8 @@ require("tekk.remap")
 require("tekk.set")
 require('tekk.packer')
 require("tekk.autocomp")
-require("tekk.copilot")
+require("tekk.lsp")
+-- require("tekk.copilot")
 
 --pywall theme
 local pywal = require('pywal')
