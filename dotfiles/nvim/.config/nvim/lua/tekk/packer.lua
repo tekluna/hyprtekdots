@@ -52,6 +52,13 @@ return require('packer').startup(function(use)
             'hrsh7th/vim-vsnip',
         }
     }
+    -- Snippets
+    use({
+        "L3MON4D3/LuaSnip",
+        requires= {
+            "rafamadriz/friendly-snippets",
+        }
+    })
     use {
         'numToStr/Comment.nvim',
         config = function()
@@ -67,7 +74,7 @@ return require('packer').startup(function(use)
     }
 
     -- Single plugins
-    use 'github/copilot.vim'
+    -- use 'github/copilot.vim'
     use 'ThePrimeagen/harpoon'
     use 'mbbill/undotree'
     use 'tpope/vim-fugitive'
@@ -76,4 +83,5 @@ return require('packer').startup(function(use)
     use 'nvim-tree/nvim-tree.lua'
     use 'echasnovski/mini.nvim'
     use 'prettier/vim-prettier'
+    use "RRethy/vim-illuminate"
 end)
